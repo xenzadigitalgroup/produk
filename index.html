@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shope App</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #dedede;
+  }
+
+  nav {
+    background-color: #3295ff;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 0px 0px 12px 12px;
+  }
+
+  nav button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 10px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan */
+  }
+
+  nav button.active {
+    background-color: #0e82ff;
+  }
+
+  .products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .product {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    margin: 5px;
+    padding: 10px;
+    width: 300px;
+    text-align: left; /* Ubah ke center */
+    position: relative; /* Menambahkan properti position */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan */
+    font-size: 13px;
+  }
+
+  .product img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    display: block; /* Menempatkan gambar di tengah */
+    margin: 0 auto; /* Menempatkan gambar di tengah */
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+  }
+
+  .buyBtn {
+    background-color: #3295ff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: right;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute; /* Menambahkan properti position */
+    bottom: 10px; /* Menyesuaikan posisi tombol */
+    right: 10px; /* Menyesuaikan posisi tombol */
+  }
+</style>
+</head>
+<body>
+<nav>
+  <button id="digitalBtn" class="active">Reksa Dana</button>
+  <button id="physicalBtn">Saham</button>
+  <button id="">Deposito</button>
+</nav>
+<div class="products-container" id="productsContainer">
+  <!-- Produk Digital -->
+  <div class="product digital">
+    <img src="https://bibit.id/_next/static/media/MJR02.a7755ecc.svg" alt="Produk Digital 1">
+    <h4>Majoris Saham Alokasi Dinamik</h4>
+    <p>
+        Jenis Reksa Dana : Saham<br>
+        Return All : 9,57%<br>
+        Min Pembelian : Rp100.000<br>
+        Tingkat Resiko : Tinggi<br>
+        Tanggal Peluncuran : 30 Nov 2015<br>
+        Bank Penampung : Mandiri
+    </p>
+    <button class="buyBtn" onclick="window.location.href='https://xenza.olshopku.com/produk/bnp-paribas-sri-kehati-2441687'">Beli</button>
+  </div>
+  <div class="product digital">
+    <img src="https://bibit.id/_next/static/media/MEES2.664818ba.svg" alt="Produk Digital 2">
+    <h4>BNP Paribas Sri Kehati</h4>
+    <p>
+        Jenis Reksa Dana : Saham<br>
+        Return All : 9,01%<br>
+        Min Pembelian : Rp10.000<br>
+        Tingkat Resiko : Tinggi<br>
+        Tanggal Peluncuran : 28 Nov 2018<br>
+        Bank Penampung : Bca
+    </p>
+    <button class="buyBtn" onclick="window.location.href='https://xenza.olshopku.com/produk/trim-kapital-plus-2441689'">Beli</button>
+  </div>
+  <div class="product digital">
+    <img src="https://bibit.id/_next/static/media/LG002.d5cb2750.svg" alt="Produk Digital 2">
+    <h4>Trim Kapital Plus</h4>
+    <p>
+        Jenis Reksa Dana : Saham<br>
+        Return All : 10,09%<br>
+        Min Pembelian : Rp100.000<br>
+        Tingkat Resiko : Tinggi<br>
+        Tanggal Peluncuran : 26 Mei 2008<br>
+        Bank Penampung : Bca
+    </p>
+    <button class="buyBtn" onclick="window.location.href='https://example.com/digital2'">Beli</button>
+  </div>
+  <!-- Produk Asli -->
+  <div class="product physical">
+    <img src="https://assets.stockbit.com/logos/companies/BBCA.png" alt="Produk Asli 1">
+    <h4>BBCA</h4>
+    <p>Produk belum tersedia</p>
+    <button class="buyBtn" onclick="window.location.href='https://example.com/physical1'">Beli</button>
+  </div>
+  <div class="product physical">
+    <img src="https://assets.stockbit.com/logos/companies/BMRI.png" alt="Produk Asli 2">
+    <h4>BMRI</h4>
+    <p>Produk belum tersedia</p>
+    <button class="buyBtn" onclick="window.location.href='https://example.com/physical2'">Beli</button>
+  </div>
+  <div class="product physical">
+    <img src="https://assets.stockbit.com/logos/companies/BBRI.png" alt="Produk Asli 2">
+    <h4>BBRI</h4>
+    <p>Produk belum tersedia</p>
+    <button class="buyBtn" onclick="window.location.href='https://example.com/physical2'">Beli</button>
+  </div>
+  <div class="product physical">
+    <img src="https://assets.stockbit.com/logos/companies/BNGA.png" alt="Produk Asli 2">
+    <h4>BNGA</h4>
+    <p>Produk belum tersedia</p>
+    <button class="buyBtn" onclick="window.location.href='https://example.com/physical2'">Beli</button>
+  </div>
+  <div class="product physical">
+    <img src="https://assets.stockbit.com/logos/companies/NISP.png" alt="Produk Asli 2">
+    <h4>NISP</h4>
+    <p>Produk belum tersedia</p>
+    <button class="buyBtn" onclick="window.location.href='https://example.com/physical2'">Beli</button>
+  </div>
+  <div class="product physical">
+    <img src="https://assets.stockbit.com/logos/companies/GOTO.png" alt="Produk Asli 2">
+    <h4>GOTO</h4>
+    <p>Produk belum tersedia</p>
+    <button class="buyBtn" onclick="window.location.href='https://example.com/physical2'">Beli</button>
+  </div>
+</div>
+<script>
+  document.getElementById('digitalBtn').addEventListener('click', function() {
+    toggleProduct('digital');
+  });
+
+  document.getElementById('physicalBtn').addEventListener('click', function() {
+    toggleProduct('physical');
+  });
+
+  function toggleProduct(type) {
+    var products = document.getElementsByClassName('product');
+    for (var i = 0; i < products.length; i++) {
+      if (products[i].classList.contains(type)) {
+        products[i].style.display = 'block';
+      } else {
+        products[i].style.display = 'none';
+      }
+    }
+    var buttons = document.getElementsByTagName('button');
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].classList.remove('active');
+    }
+    document.getElementById(type + 'Btn').classList.add('active');
+  }
+
+  // Menampilkan produk digital secara default
+  toggleProduct('digital');
+</script>
+</body>
+</html>
