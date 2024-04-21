@@ -9,20 +9,26 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #dedede;
+    background-color: #f9f9f9;
   }
 
   nav {
     background-color: #42A5F5;
+    padding-bottom: 10px;
     padding: 15px 0;
     text-align: center;
     border-radius: 0px 0px 12px 12px;
+    position: fixed; /* Tetapkan posisi header */
+    width: 100%; /* Buat lebar header 100% */
+    top: 0; /* Letakkan header di bagian atas */
+    z-index: 1000; /* Pastikan header di atas elemen lain */
   }
-
+  
   nav button {
     background-color: transparent;
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
     cursor: pointer;
     font-size: 16px;
     margin: 0 10px;
@@ -33,22 +39,23 @@
 
   nav button.active {
     background-color: #0e82ff;
+    color: #ffffff;
   }
 
   .products-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 90px;
   }
 
   .product {
     background-color: #ffffff;
     border: 1px solid #ffffff;
-    border-radius: 8px;
-    margin: 5px;
-    padding: 10px;
-    width: 300px;
+    border-radius: 20px;
+    margin: 15px;
+    padding: 20px;
+    width: 320px;
     text-align: left; /* Ubah ke center */
     position: relative; /* Menambahkan properti position */
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan */
@@ -56,12 +63,17 @@
   }
 
   .product img {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     margin-bottom: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan */
     display: block; /* Menempatkan gambar di tengah */
     margin: 0 auto; /* Menempatkan gambar di tengah */
     border-radius: 50%; /* Membuat gambar menjadi bulat */
+    position: absolute;
+    top: -20px; /* Menyesuaikan posisi gambar */
+    left: 10%; /* Menyesuaikan posisi gambar */
+    transform: translateX(-50%);
   }
 
   .buyBtn {
@@ -73,10 +85,25 @@
     text-decoration: none;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
     position: absolute; /* Menambahkan properti position */
     bottom: 10px; /* Menyesuaikan posisi tombol */
     right: 10px; /* Menyesuaikan posisi tombol */
+  }
+  .search-container {
+    margin-top: 0px; /* Sesuaikan dengan tinggi navbar */
+    text-align: center;
+    padding: 20px;
+  }
+
+  .search-box {
+    padding: 6px;
+    width: 350px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan */
+    border-radius: 15px;
+    font-size: 16px;
+    box-sizing: border-box;
   }
 </style>
 </head>
@@ -85,7 +112,13 @@
   <button id="digitalBtn" class="active">Reksa Dana</button>
   <button id="physicalBtn">Saham</button>
   <button id="">Deposito</button>
+  <div class="search-container">
+    <input type="text" class="search-box" id="searchBox" placeholder="Cari produk...">
+  </div>
 </nav>
+<div class="search-container">
+  <input type="text" class="search-box" id="searchBox" placeholder="Cari produk...">
+</div>
 <div class="products-container" id="productsContainer">
   <!-- Produk Digital -->
   <div class="product digital">
@@ -127,6 +160,45 @@
     </p>
     <button class="buyBtn" onclick="window.location.href='https://xenza.bukaolshop.site/produk/trim-kapital-plus-2441689'">Beli</button>
   </div>
+  <div class="product digital">
+    <img src="https://bibit.id/_next/static/media/MJR02.a7755ecc.svg" alt="Produk Digital 1">
+    <h4>Majoris Pasar Uang Indonesia</h4>
+    <p>
+        Jenis Reksa Dana : Pasar Uang<br>
+        Return All : 4,77%<br>
+        Min Pembelian : Rp100.000<br>
+        Tingkat Resiko : Rendah<br>
+        Tanggal Peluncuran : 06 April 2016<br>
+        Bank Penampung : Mandiri
+    </p>
+    <button class="buyBtn" onclick="window.location.href='#'">Beli</button>
+  </div>
+  <div class="product digital">
+    <img src="https://bibit.id/_next/static/media/MAN02.52e2ed6d.svg" alt="Produk Digital 1">
+    <h4>Manulife Dana Kas Syariah</h4>
+    <p>
+        Jenis Reksa Dana : Pasar Uang<br>
+        Return All : 3,89%<br>
+        Min Pembelian : Rp10.000<br>
+        Tingkat Resiko : Rendah<br>
+        Tanggal Peluncuran : 31 Agustus 2018<br>
+        Bank Penampung : Jago
+    </p>
+    <button class="buyBtn" onclick="window.location.href='#'">Beli</button>
+  </div>
+  <div class="product digital">
+    <img src="https://bibit.id/_next/static/media/SCH02.5fbc2092.svg" alt="Produk Digital 1">
+    <h4>Schroder Dana Likuid Syariah</h4>
+    <p>
+        Jenis Reksa Dana : Pasar Uang<br>
+        Return All : 3,82%<br>
+        Min Pembelian : Rp10.000<br>
+        Tingkat Resiko : Rendah<br>
+        Tanggal Peluncuran : 20 Nov 2019<br>
+        Bank Penampung : Bca
+    </p>
+    <button class="buyBtn" onclick="window.location.href='#'">Beli</button>
+  </div>
   <!-- Produk Asli -->
   <div class="product physical">
     <img src="https://assets.stockbit.com/logos/companies/BBCA.png" alt="Produk Asli 1">
@@ -165,13 +237,21 @@
     <button class="buyBtn" onclick="window.location.href='https://example.com/physical2'">Beli</button>
   </div>
 </div>
+<footer style="text-align: center; background-color: #f9f9f9; padding: 10px;">
+  <p style="color: #777777b3; font-size: 12px;">&copy; 2024 XENZA DIGITAL GROUP.</p>
+</footer>
+
 <script>
-  document.getElementById('digitalBtn').addEventListener('click', function() {
+   document.getElementById('digitalBtn').addEventListener('click', function() {
     toggleProduct('digital');
   });
 
   document.getElementById('physicalBtn').addEventListener('click', function() {
     toggleProduct('physical');
+  });
+
+  document.getElementById('searchBox').addEventListener('input', function() {
+    searchProducts(this.value.toLowerCase());
   });
 
   function toggleProduct(type) {
@@ -188,6 +268,18 @@
       buttons[i].classList.remove('active');
     }
     document.getElementById(type + 'Btn').classList.add('active');
+  }
+
+  function searchProducts(query) {
+    var products = document.getElementsByClassName('product');
+    for (var i = 0; i < products.length; i++) {
+      var productName = products[i].querySelector('h4').textContent.toLowerCase();
+      if (productName.includes(query)) {
+        products[i].style.display = 'block';
+      } else {
+        products[i].style.display = 'none';
+      }
+    }
   }
 
   // Menampilkan produk digital secara default
